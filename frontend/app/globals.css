@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  background: #f7f1e8;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(145deg, rgba(247, 241, 232, 0.98), rgba(240, 231, 214, 0.92)),
+    radial-gradient(circle at top right, rgba(177, 139, 71, 0.18), transparent 26%),
+    radial-gradient(circle at left center, rgba(94, 116, 101, 0.18), transparent 26%);
+  color: #15221d;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(21, 34, 29, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(21, 34, 29, 0.03) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.glass-panel {
+  background: rgba(255, 251, 245, 0.78);
+  backdrop-filter: blur(14px);
+}
+
+.seat-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.seat-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -15% -55% auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(200, 91, 60, 0.2), transparent 65%);
+}

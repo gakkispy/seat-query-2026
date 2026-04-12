@@ -1,0 +1,11 @@
+backend/.env
+frontend/.env.local
+frontend/.next/
+frontend/node_modules/
+scripts/.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.tmp

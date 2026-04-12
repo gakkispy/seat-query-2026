@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:18-alpine
+    container_name: seat-query-postgres
+    environment:
+      POSTGRES_DB: seat_query
+      POSTGRES_USER: seat_query
+      POSTGRES_PASSWORD: seat_query
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./deployments/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+
+volumes:
+  postgres_data:
