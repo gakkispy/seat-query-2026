@@ -1,6 +1,6 @@
 "use client";
 
-import { KeyboardEvent, startTransition, useEffect, useState } from "react";
+import { CompositionEvent, KeyboardEvent, startTransition, useEffect, useState } from "react";
 
 import { SeatResultsModal, SeatResultsView } from "@/components/seat-results-view";
 import { searchSeats, type SeatResult } from "@/lib/api";
@@ -16,6 +16,7 @@ export function SeatSearch() {
   const [error, setError] = useState<string | null>(null);
   const [hasSearched, setHasSearched] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [isComposing, setIsComposing] = useState(false);
 
   useEffect(() => {
     if (RESULT_VIEW_MODE !== "modal" || !showModal) {
@@ -65,8 +66,20 @@ export function SeatSearch() {
       return;
     }
 
+    if (isComposing || event.nativeEvent.isComposing || event.nativeEvent.keyCode === 229) {
+      return;
+    }
+
     event.preventDefault();
     void handleSearch();
+  };
+
+  const handleCompositionStart = () => {
+    setIsComposing(true);
+  };
+
+  const handleCompositionEnd = (_event: CompositionEvent<HTMLInputElement>) => {
+    setIsComposing(false);
   };
 
   const handleBack = () => {
@@ -74,6 +87,14 @@ export function SeatSearch() {
     setHasSearched(false);
     setError(null);
     setResults([]);
+  };
+
+  const handleButtonPress = () => {
+    if (loading) {
+      return;
+    }
+
+    void handleSearch();
   };
 
   if (RESULT_VIEW_MODE === "page" && hasSearched) {
@@ -99,6 +120,8 @@ export function SeatSearch() {
               className="w-full rounded-2xl border border-white/10 bg-white/8 px-4 py-4 text-base text-black outline-none transition placeholder:text-black/35 focus:border-gold focus:ring-2 focus:ring-gold/25"
               enterKeyHint="search"
               onChange={(event) => setQuery(event.target.value)}
+              onCompositionEnd={handleCompositionEnd}
+              onCompositionStart={handleCompositionStart}
               onKeyDown={handleKeyDown}
               placeholder="例如：张三"
               spellCheck={false}
@@ -106,11 +129,9 @@ export function SeatSearch() {
             />
           </label>
           <button
-            className="inline-flex w-full touch-manipulation items-center justify-center rounded-2xl bg-gradient-to-r from-gold via-ember to-olive px-5 py-4 text-sm font-semibold tracking-[0.16em] text-white transition hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
+            className="inline-flex w-full touch-manipulation select-none items-center justify-center rounded-2xl bg-gradient-to-r from-gold via-ember to-olive px-5 py-4 text-sm font-semibold tracking-[0.16em] text-white transition active:scale-[0.99] hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
             disabled={loading}
-            onClick={() => {
-              void handleSearch();
-            }}
+            onClick={handleButtonPress}
             type="button"
           >
             {loading ? "查询中..." : "开始查询"}
