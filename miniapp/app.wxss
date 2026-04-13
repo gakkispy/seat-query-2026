@@ -1,0 +1,39 @@
+page {
+  min-height: 100%;
+  background:
+    linear-gradient(145deg, rgba(247, 241, 232, 0.98), rgba(240, 231, 214, 0.92)),
+    radial-gradient(circle at top right, rgba(177, 139, 71, 0.18), transparent 26%),
+    radial-gradient(circle at left center, rgba(94, 116, 101, 0.18), transparent 26%);
+  color: #15221d;
+}
+
+view,
+text,
+button,
+input {
+  box-sizing: border-box;
+}
+
+.page-shell {
+  min-height: 100vh;
+  padding: 32rpx 24rpx 48rpx;
+}
+
+.glass-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 32rpx;
+  background: rgba(255, 251, 245, 0.78);
+  box-shadow: 0 24rpx 60rpx rgba(32, 42, 35, 0.12);
+  backdrop-filter: blur(14px);
+}
+
+.section-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8rpx;
+  background: linear-gradient(90deg, #5e7465, #b18b47, #c85b3c);
+}

@@ -1,0 +1,215 @@
+.hero-panel {
+  padding: 48rpx 40rpx;
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.hero-eyebrow {
+  color: rgba(94, 116, 101, 0.82);
+  font-size: 20rpx;
+  letter-spacing: 0.36em;
+}
+
+.hero-title {
+  color: #15221d;
+  font-size: 68rpx;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.hero-description {
+  color: rgba(21, 34, 29, 0.72);
+  font-size: 28rpx;
+  line-height: 1.8;
+}
+
+.search-panel {
+  margin-top: 40rpx;
+  padding: 36rpx;
+  border-radius: 28rpx;
+  background: #15221d;
+  box-shadow: 0 24rpx 48rpx rgba(21, 34, 29, 0.14);
+}
+
+.panel-label {
+  color: rgba(247, 241, 232, 0.62);
+  font-size: 22rpx;
+  letter-spacing: 0.24em;
+}
+
+.search-input {
+  width: 100%;
+  height: 40rpx;
+  margin-top: 20rpx;
+  padding: 8rpx 30rpx;
+  border-radius: 24rpx;
+  background: rgba(255, 255, 255, 0.92);
+  color: #15221d;
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+
+.button-row {
+  display: flex;
+  gap: 20rpx;
+  margin-top: 24rpx;
+}
+
+.search-button,
+.clear-button {
+  flex: 1;
+  height: 92rpx;
+  border-radius: 24rpx;
+  font-size: 28rpx;
+  line-height: 92rpx;
+  padding: 0;
+}
+
+.search-button {
+  border: none;
+  background: linear-gradient(90deg, #b18b47, #c85b3c, #5e7465);
+  color: #ffffff;
+}
+
+.clear-button {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  color: #f7f1e8;
+}
+
+.error-text {
+  display: block;
+  margin-top: 18rpx;
+  color: #ffd6ca;
+  font-size: 24rpx;
+}
+
+.result-header {
+  margin-top: 28rpx;
+  padding: 8rpx 8rpx 0;
+}
+
+.result-title {
+  display: block;
+  color: #15221d;
+  font-size: 42rpx;
+  font-weight: 700;
+}
+
+.result-subtitle {
+  display: block;
+  margin-top: 10rpx;
+  color: rgba(21, 34, 29, 0.64);
+  font-size: 26rpx;
+}
+
+.empty-panel {
+  margin-top: 24rpx;
+  padding: 56rpx 40rpx;
+  border: 1px dashed rgba(21, 34, 29, 0.12);
+  border-radius: 28rpx;
+  background: rgba(255, 255, 255, 0.66);
+  text-align: center;
+}
+
+.empty-title {
+  display: block;
+  color: #15221d;
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.empty-description {
+  display: block;
+  margin-top: 16rpx;
+  color: rgba(21, 34, 29, 0.64);
+  font-size: 26rpx;
+  line-height: 1.8;
+}
+
+.result-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+  margin-top: 24rpx;
+}
+
+.result-card {
+  position: relative;
+  overflow: hidden;
+  padding: 36rpx;
+  border-radius: 28rpx;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 18rpx 40rpx rgba(32, 42, 35, 0.09);
+}
+
+.card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24rpx;
+}
+
+.card-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.card-label {
+  color: rgba(94, 116, 101, 0.76);
+  font-size: 20rpx;
+  letter-spacing: 0.24em;
+}
+
+.card-title {
+  color: #15221d;
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.card-subtitle {
+  color: rgba(21, 34, 29, 0.62);
+  font-size: 26rpx;
+}
+
+.card-badge {
+  padding: 10rpx 20rpx;
+  border: 1px solid rgba(177, 139, 71, 0.3);
+  border-radius: 999rpx;
+  background: rgba(177, 139, 71, 0.12);
+  color: #b18b47;
+  font-size: 22rpx;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16rpx;
+  margin-top: 28rpx;
+}
+
+.metric-card {
+  padding: 22rpx 20rpx;
+  border-radius: 20rpx;
+  background: #f5efe4;
+}
+
+.metric-label {
+  display: block;
+  color: rgba(94, 116, 101, 0.78);
+  font-size: 20rpx;
+  letter-spacing: 0.12em;
+}
+
+.metric-value {
+  display: block;
+  margin-top: 12rpx;
+  color: #15221d;
+  font-size: 28rpx;
+  font-weight: 600;
+}

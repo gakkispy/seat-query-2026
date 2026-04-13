@@ -107,7 +107,7 @@ export function SeatSearch() {
         <div className="space-y-2">
           <p className="text-xs uppercase tracking-[0.34em] text-sand/55">Quick Query</p>
           <h2 className="font-[var(--font-heading)] text-3xl sm:text-4xl">输入姓名，定位座位</h2>
-          <p className="text-sm leading-7 text-sand/70">当前结果展示支持结果页切换与模态框两种形式，可通过环境变量切换，避免首页过长和嵌套滚动。</p>
+          {/* <p className="text-sm leading-7 text-sand/70">当前结果展示支持结果页切换与模态框两种形式，可通过环境变量切换，避免首页过长和嵌套滚动。</p> */}
         </div>
 
         <div aria-label="座位查询表单" className="space-y-4" role="search">
