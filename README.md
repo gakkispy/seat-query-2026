@@ -56,7 +56,25 @@ npm install
 npm run dev
 ```
 
-The frontend runs on `http://localhost:3000` and queries the backend on `http://localhost:8080` by default.
+The frontend runs on `http://localhost:3000`.
+
+Frontend data source is controlled by `NEXT_PUBLIC_SEAT_DATA_SOURCE`:
+
+- `api`: query the backend with `NEXT_PUBLIC_API_BASE_URL`
+- `local`: use the parsed local dataset in `frontend/lib/data.js`
+
+Result presentation is controlled by `NEXT_PUBLIC_SEAT_RESULT_VIEW`:
+
+- `page`: replace the search panel with a dedicated result view
+- `modal`: open a modal result layer above the search panel
+
+Example:
+
+```bash
+NEXT_PUBLIC_SEAT_DATA_SOURCE=api
+NEXT_PUBLIC_SEAT_RESULT_VIEW=page
+NEXT_PUBLIC_API_BASE_URL=http://localhost:8080
+```
 
 ## API
 

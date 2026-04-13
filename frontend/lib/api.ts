@@ -1,3 +1,5 @@
+import { getMiniProgramSeatData, searchSeatsLocal } from "./search-core.js";
+
 export interface SeatResult {
   name: string;
   organization: string;
@@ -7,9 +9,16 @@ export interface SeatResult {
   seat: number;
 }
 
+type DataSource = "api" | "local";
+
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8080";
+const DATA_SOURCE = resolveDataSource(process.env.NEXT_PUBLIC_SEAT_DATA_SOURCE);
 
 export async function searchSeats(name: string): Promise<SeatResult[]> {
+  if (DATA_SOURCE === "local") {
+    return searchSeatsLocal(name) as SeatResult[];
+  }
+
   const response = await fetch(`${API_BASE_URL}/api/seat?name=${encodeURIComponent(name)}`, {
     method: "GET",
     headers: {
@@ -24,6 +33,22 @@ export async function searchSeats(name: string): Promise<SeatResult[]> {
   }
 
   return (await response.json()) as SeatResult[];
+}
+
+export function searchSeatsSync(name: string): SeatResult[] {
+  return searchSeatsLocal(name) as SeatResult[];
+}
+
+export function getMiniProgramSeats() {
+  return getMiniProgramSeatData();
+}
+
+export function getSeatDataSource(): DataSource {
+  return DATA_SOURCE;
+}
+
+function resolveDataSource(value: string | undefined): DataSource {
+  return value === "local" ? "local" : "api";
 }
 
 async function extractErrorMessage(response: Response): Promise<string> {
