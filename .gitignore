@@ -1,8 +1,10 @@
 backend/.env
+frontend/.env
 frontend/.env.local
 frontend/.next/
 frontend/node_modules/
-frontend/dist/
+frontend/dist/*
+frontend/dist/index.html
 scripts/.venv/
 __pycache__/
 *.pyc
