@@ -11,8 +11,8 @@ export interface SeatResult {
 
 type DataSource = "api" | "local";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8080";
-const DATA_SOURCE = resolveDataSource(process.env.NEXT_PUBLIC_SEAT_DATA_SOURCE);
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8080";
+const DATA_SOURCE = resolveDataSource(import.meta.env.VITE_SEAT_DATA_SOURCE);
 
 export async function searchSeats(name: string): Promise<SeatResult[]> {
   if (DATA_SOURCE === "local") {

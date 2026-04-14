@@ -7,7 +7,7 @@ import { searchSeats, type SeatResult } from "@/lib/api";
 
 type ResultViewMode = "page" | "modal";
 
-const RESULT_VIEW_MODE = resolveResultViewMode(process.env.NEXT_PUBLIC_SEAT_RESULT_VIEW);
+const RESULT_VIEW_MODE = resolveResultViewMode(import.meta.env.VITE_SEAT_RESULT_VIEW);
 
 export function SeatSearch() {
   const [query, setQuery] = useState("");
