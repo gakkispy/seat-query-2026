@@ -1805,13 +1805,6 @@ const C_DATA = [
     "seat": "11"
   },
   {
-    "name": "王晓晖",
-    "org": "",
-    "area": "C区",
-    "row": "一",
-    "seat": "12"
-  },
-  {
     "name": "沈文海",
     "org": "",
     "area": "C区",
