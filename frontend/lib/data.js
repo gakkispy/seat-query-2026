@@ -780,28 +780,28 @@ const B_DATA = [
     "seat": "12"
   },
   {
-    "name": "广电总局",
+    "name": "毛德智",
     "org": "",
     "area": "B区",
     "row": "二",
     "seat": "13"
   },
   {
-    "name": "广电总局",
+    "name": "唐珂",
     "org": "",
     "area": "B区",
     "row": "二",
     "seat": "14"
   },
   {
-    "name": "广电总局",
+    "name": "刘爱芳",
     "org": "",
     "area": "B区",
     "row": "二",
     "seat": "15"
   },
   {
-    "name": "广电总局",
+    "name": "钟倩",
     "org": "",
     "area": "B区",
     "row": "二",
@@ -3833,7 +3833,7 @@ const E_DATA = [
     "seat": "3"
   },
   {
-    "name": "刘惟",
+    "name": "刘维",
     "org": "",
     "area": "E区",
     "row": "一",
