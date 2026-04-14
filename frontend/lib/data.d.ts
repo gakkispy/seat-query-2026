@@ -1,6 +1,13 @@
-declare const BASE_SEAT_DATA: Record<string, string>;
-declare const SEAT_DATA: Record<string, string>;
+export interface RawSeatDataItem {
+	name: string;
+	org: string;
+	area: string;
+	row: string;
+	seat: string;
+}
 
-export { BASE_SEAT_DATA, SEAT_DATA };
+declare const NEW_DATA: RawSeatDataItem[];
 
-export default SEAT_DATA;
+export { NEW_DATA };
+
+export default NEW_DATA;
