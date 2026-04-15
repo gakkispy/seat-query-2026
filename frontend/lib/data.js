@@ -836,7 +836,7 @@ const B_DATA = [
     "seat": "20"
   },
   {
-    "name": "广电总局",
+    "name": "陈丽娜",
     "org": "",
     "area": "B区",
     "row": "二",
@@ -1417,7 +1417,7 @@ const B_DATA = [
     "seat": "19"
   },
   {
-    "name": "陈丽娜",
+    "name": "陈鲁豫",
     "org": "",
     "area": "B区",
     "row": "六",
@@ -1732,77 +1732,77 @@ const C_DATA = [
     "org": "",
     "area": "C区",
     "row": "一",
-    "seat": "1"
+    "seat": "2"
   },
   {
     "name": "董涛",
     "org": "",
     "area": "C区",
     "row": "一",
-    "seat": "2"
+    "seat": "3"
   },
   {
     "name": "王兆楠",
     "org": "",
     "area": "C区",
     "row": "一",
-    "seat": "3"
+    "seat": "4"
   },
   {
     "name": "李三秋",
     "org": "",
     "area": "C区",
     "row": "一",
-    "seat": "4"
+    "seat": "5"
   },
   {
     "name": "邓博仁",
     "org": "",
     "area": "C区",
     "row": "一",
-    "seat": "5"
+    "seat": "6"
   },
   {
     "name": "宋朝学",
     "org": "",
     "area": "C区",
     "row": "一",
-    "seat": "6"
+    "seat": "7"
   },
   {
     "name": "唐怡",
     "org": "",
     "area": "C区",
     "row": "一",
-    "seat": "7"
+    "seat": "8"
   },
   {
     "name": "赵依芳",
     "org": "",
     "area": "C区",
     "row": "一",
-    "seat": "8"
+    "seat": "9"
   },
   {
     "name": "罗建辉",
     "org": "",
     "area": "C区",
     "row": "一",
-    "seat": "9"
+    "seat": "10"
   },
   {
     "name": "魏党军",
     "org": "",
     "area": "C区",
     "row": "一",
-    "seat": "10"
+    "seat": "11"
   },
   {
     "name": "陶嘉庆",
     "org": "",
     "area": "C区",
     "row": "一",
-    "seat": "11"
+    "seat": "12"
   },
   {
     "name": "沈文海",
@@ -1840,7 +1840,7 @@ const C_DATA = [
     "seat": "5"
   },
   {
-    "name": "唐晓艳",
+    "name": "魏驱虎",
     "org": "",
     "area": "C区",
     "row": "二",
@@ -1903,7 +1903,7 @@ const C_DATA = [
     "seat": "2"
   },
   {
-    "name": "魏驱虎",
+    "name": "唐晓艳",
     "org": "",
     "area": "C区",
     "row": "三",
@@ -2941,22 +2941,22 @@ const A_DATA = [
     "name": "许秀中",
     "org": "",
     "area": "A区",
-    "row": "一",
-    "seat": "10"
+    "row": "二",
+    "seat": "4"
   },
   {
     "name": "王常宇",
     "org": "",
     "area": "A区",
-    "row": "一",
-    "seat": "11"
+    "row": "",
+    "seat": ""
   },
   {
     "name": "周祖继",
     "org": "",
     "area": "A区",
     "row": "一",
-    "seat": "12"
+    "seat": "11"
   },
   {
     "name": "何凡",
