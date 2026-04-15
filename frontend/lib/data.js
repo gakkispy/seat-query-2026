@@ -1291,7 +1291,7 @@ const B_DATA = [
     "seat": "1"
   },
   {
-    "name": "张楠",
+    "name": "薄茹",
     "org": "",
     "area": "B区",
     "row": "六",
@@ -2948,8 +2948,8 @@ const A_DATA = [
     "name": "王常宇",
     "org": "",
     "area": "A区",
-    "row": "",
-    "seat": ""
+    "row": "一",
+    "seat": "10"
   },
   {
     "name": "周祖继",
