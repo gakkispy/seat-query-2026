@@ -1368,7 +1368,7 @@ const B_DATA = [
     "seat": "12"
   },
   {
-    "name": "张凤",
+    "name": "李占鳌",
     "org": "",
     "area": "B区",
     "row": "六",
